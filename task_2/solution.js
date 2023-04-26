@@ -2,21 +2,15 @@ function calcShipping(sum, min, shipping) {
     let productsSum = sum; // сумма в корзине
     let freeShippingMinSum = min; // минимальная сумма для бесплатной доставки
     let shippingPrice = shipping; // стоимость доставки
+    let shippingSum;
 
-    // Задание №2.1. Рассчитать доставку
-
-    // создайте переменную shippingSum
-
-    // если productsSum равно 0,
-    // то shippingSum присвоить значение 0
-
-    // если productsSum Больше или равна freeShippingMinSum,
-    // то shippingSum присвоить значение 0
-
-    // если productsSum больше 0 и меньше freeShippingMinSum,
-    // то shippingSum присвоить значение shippingPrice
-
-    // Конец решения задания №2.1.
+    if (productsSum == 0) {
+        shippingSum = 0
+    } else if (productsSum >= freeShippingMinSum) {
+        shippingSum = 0
+    } else if (productsSum > 0 && productsSum < freeShippingMinSum) {
+        shippingSum = shippingPrice
+    }
 
     return shippingSum;
 }
