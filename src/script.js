@@ -74,7 +74,7 @@ function renderCartDiscount(discount) {
 function renderCartShipping(freeShipping, shipping) {
     const cartShipping = document.createElement('div');
     cartShipping.className = 'cart-item';
-    cartShipping.innerHTML = `<div>Доставка</div><div>${(freeShipping) ? 'бесплатно' : shipping} ₽</div>`;
+    cartShipping.innerHTML = `<div>Доставка</div><div>${(freeShipping) ? 'бесплатно' : `${shipping} ₽`}</div>`;
     return cartShipping;
 }
 
